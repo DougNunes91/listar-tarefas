@@ -1,0 +1,18 @@
+<li class="list-group-item" [ngClass]="toggleClass()">
+  <div class="form-check d-inline">
+    <input
+      type="checkbox"
+      class="form-check-input"
+      id="complete"
+      (change)="onCheckboxChange($event)"
+    />
+    <label for="complete" class="form-check-label lead">{{
+      taskInput.title
+    }}</label>
+  </div>
+  <div class="float-right">
+    <button class="btn btn-danger btn-sm mx-3" (click)="deleteTask(taskInput)">
+      x
+    </button>
+  </div>
+</li>
